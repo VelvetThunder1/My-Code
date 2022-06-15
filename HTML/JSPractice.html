@@ -5,10 +5,10 @@
     	<script>
       		var x = prompt("Please Enter an Integer ");
       		var y = prompt("Please Enter another Integer ");
-      		function Multiplication(num1, num2) {
+      		function Multiply(num1, num2) {
         		document.getElementById("product").innerHTML = "Product is equal to " + num1*num2;
       		}
-      		function Addition(num1, num2) {
+      		function Add(num1, num2) {
         		var z = +num1 + +num2
         		document.getElementById("adduct").innerHTML = "Adduct is equal to " + +z;
       		}     
@@ -17,10 +17,10 @@
  	<body>
     	<h2>Arithmetic Operations</h2>
     	<p id="product">Product is equal to
-      		<button type="button" onclick="Function1(x,y)">Product</button>
+      		<button type="button" onclick="Multiply(x,y)">Product</button>
     	</p>
     	<p id="adduct">Adduct is equal to
-      		<button type="button" onclick="Function2(x,y)">Adduct</button>
+      		<button type="button" onclick="Add(x,y)">Adduct</button>
     	</p>
 	</body>
 </html>
