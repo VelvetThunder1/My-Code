@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>JavaScript Practice</title>
-    <script>
-      var x = prompt("Please Enter an Integer ");
-      var y = prompt("Please Enter another Integer ");
-      function Function1() {
-        document.getElementById("product").innerHTML = "Product is equal to " + x*y;
-      }
-      function Function2() {
-        var z = +x + +y
-        document.getElementById("adduct").innerHTML = "Adduct is equal to " + +z;
-      }
-    </script>
-  </head>
-  <body>
-    <h2>Arithmetic Operations</h2>
-    <p id="product">Product is equal to
-      <button type="button" onclick="Function1()">Product</button>
-    </p>
-    <p id="adduct">Adduct is equal to
-      <button type="button" onclick="Function2()">Adduct</button>
-    </p>
-    
-  </body>
+	<head>
+    	<title>JavaScript Practice</title>
+    	<script>
+      		var x = prompt("Please Enter an Integer ");
+      		var y = prompt("Please Enter another Integer ");
+      		function Multiplication(num1, num2) {
+        		document.getElementById("product").innerHTML = "Product is equal to " + num1*num2;
+      		}
+      		function Addition(num1, num2) {
+        		var z = +num1 + +num2
+        		document.getElementById("adduct").innerHTML = "Adduct is equal to " + +z;
+      		}     
+    	</script>
+	</head>
+ 	<body>
+    	<h2>Arithmetic Operations</h2>
+    	<p id="product">Product is equal to
+      		<button type="button" onclick="Function1(x,y)">Product</button>
+    	</p>
+    	<p id="adduct">Adduct is equal to
+      		<button type="button" onclick="Function2(x,y)">Adduct</button>
+    	</p>
+	</body>
 </html>
