@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <style>
+            h2 {
+                font-family: cursive;
+                font-style: italic;
+                border-bottom-style: dashed;
+                border-bottom-width: medium;
+                color: darkslategray;
+            }
+            body {
+                background-color: honeydew;
+            }
+            p {
+                font-family: monospace;
+                color: cadetblue;
+                border-top-style: dotted;
+                border-top-width: thin;
+                border-bottom-style: dotted;
+                border-bottom-width: thin;
+            }
+            label {
+                color: darkslategray;
+                font-family: Lucida Console;
+            }
+            button {
+				background-color: darkseagreen;
+				color:darkslategrey;
+				border-color: darkseagreen;
+				border-width:thin;
+}
+        </style>
+    	<title>JavaScript Practice</title>
+	</head>
+ 	<body>
+    	<h2>Arithmetic Operations</h2>
+        <script>
+            function Add() {
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                document.getElementById("sum").innerHTML = "Sum is equal to " + +(+num1 + +num2);
+            }
+            function Diff() {
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                if (num1>num2) {
+                    document.getElementById("difference").innerHTML = "The first number entered is  " + +(num1-num2) + " more than the second number";
+                } else if (num1<num2) {
+                    document.getElementById("difference").innerHTML = "The first number entered is  " + +(num2-num1) + " less than the second number";
+                } else {
+                    document.getElementById("difference").innerHTML = "The first number entered is equal to the second";
+                }
+            }
+            function Multiply() {
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                document.getElementById("product").innerHTML = "Product is equal to " + +(num1*num2);
+            }
+    	</script>
+    	<form>
+    		<p>Number 1: <input type="number" id="number1" onchange="Multiply(); Add(); Diff()"/></p>
+			<p>Number 2: <input type="number" id="number2" onchange="Multiply(); Add(); Diff()"/></p>      	
+    		<p id="product">Product is equal to </p>
+    		<button type="button" onclick="Multiply()">Product</button>
+    		<p id="sum">Sum is equal to </p>
+     		<button type="button" onclick="Add()">Sum</button>
+      		<p id="difference"></p>
+      		<button type="button" onclick="Diff()">Difference</button>
+    	</form>
+	</body>
+</html>
